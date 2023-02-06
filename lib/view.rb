@@ -1,6 +1,6 @@
-
+require 'csv'
 class View
-  $PATH = "data/beatles.csv"
+  $PATH = "db/database.csv"
 
   def self.take_input()
     array = []
@@ -16,11 +16,6 @@ class View
       break unless ["O1", "O2", "O3"].include?(array[-1])
     end
     return array[0..-2]
-  end
-
-
-  def self.get_max_height_from_DB
-    return  # Take count of database DB.execute("SELECT COUNT(*) FROM database")
   end
 
 end

@@ -14,7 +14,7 @@ class Controller
     puts @querycode.array_of_code
   end
 
-  def initialize_db
+  def initialize_db()
     DBInitialiser.initialise_DB()
   end
 

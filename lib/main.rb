@@ -3,9 +3,10 @@ puts "welcome to block explorer"
 queryobj = QueryCode.new()
 controller = Controller.new(queryobj)
 while true
-  controller.initialize_db()
   controller.takeinput()
+  controller.initialize_db()
   puts "more?(Y/N)"
   break if gets.chomp! == 'N'
+  controller.query_db
 end
 controller.printarray()
