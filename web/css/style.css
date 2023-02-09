@@ -1,0 +1,40 @@
+.btn-main{
+  border: 2px solid #FF9900;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.btn-main:hover{
+  background-color: #FF9900;
+  color: white;
+}
+
+body{
+  background-color: #ffedd3;
+}
+
+.entry{
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btn-entry{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: #FF9900;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+.btn-entry:hover{
+  background-color: #9a5c00;
+  color: white;
+}
+
+.btn-line{
+  background-color: #FF9900;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
