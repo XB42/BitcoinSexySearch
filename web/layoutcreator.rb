@@ -10,7 +10,80 @@ class LayoutCreator
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous">
-      <link rel="stylesheet" href="web/css/style.css">
+      <style>
+      .btn-main{
+        border: 2px solid #FF9900;
+        border-radius: 10px;
+        background-color: white;
+      }
+
+      .btn-main:hover{
+        background-color: #FF9900;
+        color: white;
+      }
+
+      body{
+        background-color: #ffedd3;
+      }
+
+
+      .btn-line{
+        background-color: transparent;
+        color: black;
+      }
+
+      .btn-line:hover{
+        color: #FF9900;
+      }
+
+      .entry{
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btn-entry-dropdown{
+  border-radius: 10px;
+  background-color: #FF9900;
+  color: white;
+}
+
+.btn-entry{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: #FF9900;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+@media (max-width: 960px) {
+  .btn-entry{
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 10px !important;
+
+  }
+}
+
+.btn-entry:hover{
+  background-color: #9a5c00;
+  color: white;
+}
+
+.btn-line{
+  background-color: #FF9900;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+.btn-line:hover{
+  background-color: white;
+  color: #FF9900;
+  border-radius: 10px;
+  border: none;
+}
+
+
+      </style>
 
     <title>Search Bitcoin</title>
   </head>
@@ -21,29 +94,12 @@ class LayoutCreator
 
 
 
-      <div class="container p-0 my-3">
-        <div class="entry row p-0">
-          <div class="col-md-4 p-0">
-            <div class="dropdown my-5 mx-3 d-block">
-              <button class="btn btn-entry-dropdown dropdown-toggle btn-block" type="button" data-toggle="dropdown">Type of Data</button>
-              <div class="dropdown-menu w-100">
-                  <a class="dropdown-item" href="#">Block Height</a>
-                  <a class="dropdown-item" href="#">Transaction Count</a>
-                  <a class="dropdown-item" href="#">Fee</a>
-                  <a class="dropdown-item" href="#">Difficulty</a>
-                  <a class="dropdown-item" href="#">Reward</a>
-                  <a class="dropdown-item" href="#">Size</a>
-                  <a class="dropdown-item" href="#">Time</a>
-              </div>
-            </div>
-          </div>
-            <div class= "col-md-2 offset-md-6 p-0">
-              <button class="btn btn-entry h-100 btn-block btn-right">Add to chart</button>
-            </div>
-          </div>
-
-
-          <button class="btn btn-line h-100 btn-block mt-4 col-md-6 offset-md-3"> Add another Line</button>
+      <div class="container p-0 my-3">' +
+      yield +
+       '
+       <form action="/add" method="get">
+       <button class="btn btn-line h-100 btn-block mt-4 col-md-6 offset-md-3"> Add another Line</button>
+       </form>
         </div>
 
         <div class="row my-3 mx-5">
