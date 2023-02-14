@@ -82,6 +82,10 @@ class LayoutCreator
   border: none;
 }
 
+.btn-clicked{
+  background-color: #9a5c00;
+}
+
 
       </style>
 
@@ -137,6 +141,18 @@ class LayoutCreator
 
       <br>
       <br>
+
+      <script>
+        entrybuttons = document.getElementsByClassName("btn-entry");
+        for (let i = 0; i < entrybuttons.length; i++) {
+          let button = entrybuttons[i]
+          button.addEventListener("click", (event) => {
+          button.disabled = true;
+          button.classList.add("btn-clicked");
+        })
+        }
+
+      </script>
 
   <body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
