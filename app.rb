@@ -5,4 +5,11 @@ class View < Sinatra::Base
   get '/' do
     erb :index
     end
+
+  get '/generate' do
+    x = params[:x]
+    y = params[:y]
+    puts x
+  end
+
 end
